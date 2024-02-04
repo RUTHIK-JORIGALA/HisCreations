@@ -1,0 +1,6 @@
+.bg-graphic{
+    background-image: url('../../public/Images/Graphic.jpg');
+    height: 90%;
+    border-radius: 0 0 15px 15px;
+    background-size:cover;
+}
