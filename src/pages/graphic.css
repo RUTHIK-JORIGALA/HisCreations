@@ -4,3 +4,21 @@
     border-radius: 0 0 15px 15px;
     background-size:cover;
 }
+
+.bg-img-graphic{
+    background-image: url('../../public/Images/Graphic.jpg');
+    /* background-image: url('../data.json'); */
+    background-size: cover;
+    /* filter: brightness(0.7);    */
+}
+
+.bg-img-interior{
+    background-image: url('../../public/Images/interier-design.jpg');
+    background-size: cover;
+}
+
+.bg-img-webDev{
+    background-image: url('../../public/Images/web-develop.jpg');
+    background-size: cover;
+
+}
