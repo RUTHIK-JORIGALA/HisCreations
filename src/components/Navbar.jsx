@@ -1,6 +1,6 @@
-import React from 'react'
-
+import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -25,20 +25,27 @@ const Navbar = () => {
     },
   ];
 
+  const handleActive = (event, title) =>{
+    event.preventDefault()
+    setActive(title)
+  }
+
+  console.log(active)
 
   return (
-    <nav className="w-3/5 mx-auto py-6 bg-white rounded-full px-6 ">
+    <nav className="w-3/5 mx-auto py-1 bg-white rounded-full px-6 ">
 
       <ul className="list-none flex justify-between items-center ">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-semibold cursor-pointer text-3xl tracking-wide ${
-              active === nav.title ? "bg-blue-400 rounded-3xl px-4 py-2 " : "text-dimWhite"
+            className={`font-poppins h-12 font-semibold cursor-pointer text-3xl tracking-wide flex items-center ${
+              active === nav.title ? "bg-blue-400 transition ease-in-out duration-700 rounded-3xl px-4 " : "text-dimWhite"
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
-            onClick={() => setActive(nav.title)}
+            onClick={(event) => handleActive(event,nav.title)}
           >
-            <a href={`#${nav.id}`}>{nav.title}</a>
+            <a href={`${nav.id}`}>{nav.title}</a>
+            {/* <Link to={`/${nav.id}`} >{nav.title}</Link> */}
           </li>
         ))}
       </ul>

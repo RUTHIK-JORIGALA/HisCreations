@@ -1,15 +1,15 @@
 import React from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 
 const Home = () => {
   
   // console.log(location.pathname);
   return (
-    <div className='bg-red-300  pt-36 ' >
-        <div className='absolute w-64 h-64 bg-white rounded-full left-1/2 -top-1 transform -translate-x-1/2 -translate-y-1/2'>
-
-        </div>
+    <div className='bg-red-400  pt-36 ' >
+        <Header />
+        
         {/* <div className='bg-white h-14 w-3/5 mx-auto rounded-full shadow-xl flex justify-center items-center px-12 '>
             <ul className='w-full flex justify-between '>
                 <li><NavLink to="/" className="font-bold text-xl bg-blue-400 px-4 py-2 rounded-full tracking-wider"> Home</NavLink></li>
